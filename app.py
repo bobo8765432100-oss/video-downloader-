@@ -1,13 +1,13 @@
 from flask import Flask, render_template, request
 import yt_dlp
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='.')
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
         url = request.form.get('url')
-        # هنا بيكمل باقي الكود الخاص بتحميل الفيديوهات بتاعك
+        # هنا مكان كود تحميل الفيديو الخاص بك
         
     return render_template('index.html')
 
